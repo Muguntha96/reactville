@@ -2,10 +2,13 @@
 const Ingredient = (props) => {
 	return (
 		<li>
-			Name of ingredient here
-			<button>+</button>
-			<button>X</button>
+	{props.ingredient.name}
+	{props.isList 
+		?	<button>+</button>
+		:	<button>X</button>
+	}
 		</li>
+	
 	)
 }
 
