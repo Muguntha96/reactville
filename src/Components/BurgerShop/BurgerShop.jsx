@@ -13,12 +13,15 @@ const BurgerShop = (props) => {
   const removeFromBurger =(idx) =>{
     setStack(stack.filter((el,i) => i!==idx))
   }
+  const handleClearOrder = () =>{
+    setStack([])
+  }
   console.log(ingredients)
   return (
     <div className="burger-shop">
       <nav>
         <h1>Burger Shop</h1>
-        <button>Clear Order</button>
+        <button onClick={handleClearOrder}>Clear Order</button>
       </nav>
       <section>
         <IngridientList
