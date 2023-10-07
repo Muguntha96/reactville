@@ -25,8 +25,10 @@ const BurgerShop = (props) => {
       </nav>
       <section>
         <IngridientList
+        addToBurger={addToBurger}
           ingredients={ingredients}
-          addToBurger={addToBurger}
+         
+          
         />
         <BurgerStack
          stack={stack} 
