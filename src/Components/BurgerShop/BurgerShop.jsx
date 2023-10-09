@@ -3,24 +3,19 @@ import { useState } from 'react'
 import { ingredients } from '../../data/burger-data'
 import IngridientList from './IngredientList'
 import BurgerStack from './BurgerStack'
-
 const BurgerShop = (props) => {
   const [stack, setStack] = useState([])
   const addToBurger = (ingredient) => {
-      setStack([...stack, ingredient])
-      }
-
-  const removeFromBurger =(idx,indx) =>{
+    setStack([...stack, ingredient])
+  }
+  const removeFromBurger = (idx, indx) => {
     console.log(idx)
     console.log(stack)
-    setStack(stack.filter((el,i,j) => 
-      (i!==idx)&&(j!==indx)
+    setStack(stack.filter((el, i, j) =>
+      (i !== idx) && (j !== indx)
     ))
- 
-  
-  
   }
-  const handleClearOrder = () =>{
+  const handleClearOrder = () => {
     setStack([])
   }
   return (
@@ -31,13 +26,13 @@ const BurgerShop = (props) => {
       </nav>
       <section>
         <IngridientList
-        addToBurger={addToBurger}
+          addToBurger={addToBurger}
           ingredients={ingredients}
-         stack={stack}
-                  />
+          stack={stack}
+        />
         <BurgerStack
-         stack={stack} 
-        removeFromBurger={removeFromBurger}/>
+          stack={stack}
+          removeFromBurger={removeFromBurger} />
       </section>
     </div>
   )

@@ -6,7 +6,6 @@ import './styles/App.css'
 import Landing from './Components/Landing/Landing'
 import BurgerShop from './Components/BurgerShop/BurgerShop'
 import Nav from './Components/Nav/Nav'
-
 const App = () => {
   const [dayTime, setDayTime] = useState(true)
   return (
@@ -17,7 +16,6 @@ const App = () => {
         <Route path='/burgers' element={<BurgerShop />} />
       </Routes>
     </main>
-
   )
 }
 export default App

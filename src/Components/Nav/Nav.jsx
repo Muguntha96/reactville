@@ -8,7 +8,7 @@ const Nav = (props) => {
       <NavLink to='/'> <img src={Logo} alt='logo-react' /></NavLink>
       <NavLink to='/burgers'>
         BURGER SHOP</NavLink>
-        <Clock dayTime={props.dayTime} setDayTime={props.setDayTime}/>
+      <Clock dayTime={props.dayTime} setDayTime={props.setDayTime} />
     </nav>
   )
 }
