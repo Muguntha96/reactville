@@ -7,16 +7,22 @@ import BurgerStack from './BurgerStack'
 const BurgerShop = (props) => {
   const [stack, setStack] = useState([])
   const addToBurger = (ingredient) => {
-    setStack([...stack, ingredient])
-  }
+      setStack([...stack, ingredient])
+      }
 
-  const removeFromBurger =(idx) =>{
-    setStack(stack.filter((el,i) => i!==idx))
+  const removeFromBurger =(idx,indx) =>{
+    console.log(idx)
+    console.log(stack)
+    setStack(stack.filter((el,i,j) => 
+      (i!==idx)&&(j!==indx)
+    ))
+ 
+  
+  
   }
   const handleClearOrder = () =>{
     setStack([])
   }
-  console.log(ingredients)
   return (
     <div className="burger-shop">
       <nav>
@@ -27,9 +33,8 @@ const BurgerShop = (props) => {
         <IngridientList
         addToBurger={addToBurger}
           ingredients={ingredients}
-         
-          
-        />
+         stack={stack}
+                  />
         <BurgerStack
          stack={stack} 
         removeFromBurger={removeFromBurger}/>

@@ -1,16 +1,15 @@
 import Ingredient from "./Ingredient"
 const BurgerStack = (props) => {
   return (
-   
-     <ul className="burger-stack">
+      <ul className="burger-stack">
 {props.stack.length ?
-props.stack.map((ele,idx) =>(
+props.stack.map((ingredient,idx) =>(
   <Ingredient 
   key={idx}
    idx={idx}
-   ingredient={ele}
+   ingredient={ingredient}
     removeFromBurger={props.removeFromBurger} 
-    /> )).reverse()
+    /> ))
     :
     <div>
       No Ingredients
